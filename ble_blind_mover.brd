@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.2">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -53,7 +53,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
@@ -170,13 +170,13 @@
 <hole x="3" y="3" drill="3"/>
 <hole x="3" y="57.5" drill="3"/>
 <hole x="59" y="57.5" drill="3"/>
-<wire x1="10.454" y1="40.894" x2="15.454" y2="40.894" width="2" layer="46" curve="-180"/>
-<wire x1="29.504" y1="40.894" x2="34.504" y2="40.894" width="2" layer="46" curve="-180"/>
-<wire x1="34.504" y1="40.894" x2="34.504" y2="37.084" width="2" layer="46"/>
-<wire x1="29.504" y1="41.148" x2="29.504" y2="40.894" width="2" layer="46"/>
-<wire x1="29.504" y1="40.894" x2="29.504" y2="37.084" width="2" layer="46"/>
-<wire x1="15.454" y1="40.894" x2="15.454" y2="37.084" width="2" layer="46"/>
-<wire x1="10.454" y1="40.894" x2="10.454" y2="37.084" width="2" layer="46"/>
+<wire x1="10.454" y1="40.894" x2="15.454" y2="40.894" width="2" layer="20" curve="-180"/>
+<wire x1="29.504" y1="40.894" x2="34.504" y2="40.894" width="2" layer="20" curve="-180"/>
+<wire x1="34.504" y1="40.894" x2="34.504" y2="37.084" width="2" layer="20"/>
+<wire x1="29.504" y1="41.148" x2="29.504" y2="40.894" width="2" layer="20"/>
+<wire x1="29.504" y1="40.894" x2="29.504" y2="37.084" width="2" layer="20"/>
+<wire x1="15.454" y1="40.894" x2="15.454" y2="37.084" width="2" layer="20"/>
+<wire x1="10.454" y1="40.894" x2="10.454" y2="37.084" width="2" layer="20"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -2210,6 +2210,36 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 </package>
 </packages>
 </library>
+<library name="pinhead">
+<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="1X02">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2425,21 +2455,21 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="NAME" x="11.049" y="47.371" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="13.589" y="47.371" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C4" library="rcl" package="C0603" value="100nF" x="52.07" y="19.05" smashed="yes" rot="R180">
-<attribute name="NAME" x="52.705" y="18.415" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="52.705" y="20.955" size="1.27" layer="27" rot="R180"/>
+<element name="C4" library="rcl" package="C0603" value="100nF" x="51.57" y="17.55" smashed="yes" rot="R180">
+<attribute name="NAME" x="52.205" y="16.915" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="52.205" y="19.455" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C5" library="rcl" package="C0603" value="750pF" x="47.498" y="19.812" smashed="yes" rot="R270">
-<attribute name="NAME" x="48.133" y="20.447" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="45.593" y="20.447" size="1.27" layer="27" rot="R270"/>
+<element name="C5" library="rcl" package="C0603" value="750pF" x="46.998" y="18.312" smashed="yes" rot="R270">
+<attribute name="NAME" x="47.633" y="18.947" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="45.093" y="18.947" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C6" library="rcl" package="C0603" value="22nF" x="49.53" y="19.812" smashed="yes" rot="R270">
-<attribute name="NAME" x="50.165" y="20.447" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="47.625" y="20.447" size="1.27" layer="27" rot="R270"/>
+<element name="C6" library="rcl" package="C0603" value="22nF" x="49.03" y="18.312" smashed="yes" rot="R270">
+<attribute name="NAME" x="49.665" y="18.947" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="47.125" y="18.947" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C7" library="rcl" package="C0603" value="1uF" x="46.482" y="16.002" smashed="yes" rot="R270">
-<attribute name="NAME" x="47.117" y="16.637" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="44.577" y="16.637" size="1.27" layer="27" rot="R270"/>
+<element name="C7" library="rcl" package="C0603" value="1uF" x="45.982" y="14.502" smashed="yes" rot="R270">
+<attribute name="NAME" x="46.617" y="15.137" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="44.077" y="15.137" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C8" library="rcl" package="C150-064X183" value="120nF" x="12.954" y="20.32" smashed="yes" rot="R180">
 <attribute name="NAME" x="21.463" y="16.891" size="1.27" layer="25" ratio="10" rot="R180"/>
@@ -2480,19 +2510,19 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="OC_TME" value="STTH1L06A" x="-56.158" y="-9.072" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="30.186" y="15.158" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="D4" library="xCommonLib" package="DO214AC" value="STTH1L06A" x="55.626" y="16.51" smashed="yes" rot="R270">
-<attribute name="NAME" x="56.912" y="19.15" size="1.27" layer="25" ratio="10" rot="R270"/>
-<attribute name="OC_TME" value="STTH1L06A" x="-33.274" y="-16.51" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="53.07" y="19.15" size="1.27" layer="27" ratio="10" rot="R270"/>
+<element name="D4" library="xCommonLib" package="DO214AC" value="STTH1L06A" x="55.126" y="15.01" smashed="yes" rot="R270">
+<attribute name="NAME" x="56.412" y="17.65" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="OC_TME" value="STTH1L06A" x="-33.774" y="-18.01" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="52.57" y="17.65" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="FUSE_MAINS" library="fuse" package="SH22,5" value="TBD" x="47.244" y="37.846" smashed="yes" rot="R270">
-<attribute name="MF" value="SCHURTER" x="-13.716" y="12.446" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="0031.8201" x="-13.716" y="12.446" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="41.148" y="50.546" size="1.778" layer="25" ratio="10" rot="R270"/>
-<attribute name="OC_FARNELL" value="" x="-13.716" y="12.446" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="OC_NEWARK" value="" x="-13.716" y="12.446" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="OC_RET" value="51-01-42" x="-13.716" y="12.446" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="41.148" y="36.703" size="1.778" layer="27" ratio="10" rot="R270"/>
+<element name="FUSE_MAINS" library="fuse" package="SH22,5" value="TBD" x="47.244" y="35.846" smashed="yes" rot="R270">
+<attribute name="MF" value="SCHURTER" x="-13.716" y="10.446" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="0031.8201" x="-13.716" y="10.446" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="41.148" y="48.546" size="1.778" layer="25" ratio="10" rot="R270"/>
+<attribute name="OC_FARNELL" value="" x="-13.716" y="10.446" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="" x="-13.716" y="10.446" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_RET" value="51-01-42" x="-13.716" y="10.446" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="41.148" y="34.703" size="1.778" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="J1" library="105017-0001" package="MOLEX_105017-0001" value="105017-0001" x="10.922" y="1.524" smashed="yes">
 <attribute name="AVAILABILITY" value="Unavailable" x="87.122" y="-78.486" size="1.778" layer="27" display="off"/>
@@ -2504,10 +2534,10 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="PRICE" value="None" x="87.122" y="-78.486" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="15.32601875" y="3.02536875" size="0.25423125" layer="27" rot="R90"/>
 </element>
-<element name="L1" library="ferrocore" package="DE1207" value="DE1207-820" x="44.45" y="8.382" smashed="yes">
-<attribute name="NAME" x="44.45" y="15.652" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="OC_TME" value="DE1207-820" x="85.09" y="-33.528" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="44.45" y="0.112" size="1.27" layer="27" align="bottom-center"/>
+<element name="L1" library="ferrocore" package="DE1207" value="DE1207-820" x="43.95" y="6.882" smashed="yes">
+<attribute name="NAME" x="43.95" y="14.152" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="OC_TME" value="DE1207-820" x="84.59" y="-35.028" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="43.95" y="-1.388" size="1.27" layer="27" align="bottom-center"/>
 </element>
 <element name="L2" library="SparkFun" package="1210" value="470uH" x="24.892" y="16.764" smashed="yes" rot="R270">
 <attribute name="NAME" x="25.392" y="17.564" size="0.4064" layer="25" rot="R270"/>
@@ -2531,22 +2561,22 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="OC_TME" value="SMD0603-470R" x="-5.334" y="154.432" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="33.401" y="61.087" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R11" library="rcl" package="R0603" value="82K" x="53.594" y="21.59" smashed="yes" rot="R270">
-<attribute name="NAME" x="54.229" y="22.225" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="51.689" y="22.225" size="1.27" layer="27" rot="R270"/>
+<element name="R11" library="rcl" package="R0603" value="82K" x="53.094" y="20.09" smashed="yes" rot="R270">
+<attribute name="NAME" x="53.729" y="20.725" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="51.189" y="20.725" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="R12" library="rcl" package="R0603" value="470" x="32.766" y="57.15" smashed="yes" rot="R180">
 <attribute name="NAME" x="33.401" y="56.515" size="1.27" layer="25" rot="R180"/>
 <attribute name="OC_TME" value="SMD0603-470R" x="-10.414" y="152.4" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="33.401" y="59.055" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R13" library="rcl" package="R0603" value="47K" x="51.562" y="21.59" smashed="yes" rot="R90">
-<attribute name="NAME" x="50.927" y="20.955" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="53.467" y="20.955" size="1.27" layer="27" rot="R90"/>
+<element name="R13" library="rcl" package="R0603" value="47K" x="51.062" y="20.09" smashed="yes" rot="R90">
+<attribute name="NAME" x="50.427" y="19.455" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="52.967" y="19.455" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R14" library="rcl" package="R0603" value="100K" x="48.26" y="22.352" smashed="yes" rot="R180">
-<attribute name="NAME" x="48.895" y="21.717" size="1.27" layer="25" rot="R180"/>
-<attribute name="VALUE" x="48.895" y="24.257" size="1.27" layer="27" rot="R180"/>
+<element name="R14" library="rcl" package="R0603" value="100K" x="47.76" y="20.852" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.395" y="20.217" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="48.395" y="22.757" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R2" library="rcl" package="R0603" value="47K" x="5.588" y="52.07" smashed="yes" rot="R90">
 <attribute name="NAME" x="4.953" y="51.435" size="1.27" layer="25" rot="R90"/>
@@ -2603,10 +2633,10 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="NAME" x="16.256" y="55.118" size="1.9304" layer="25"/>
 <attribute name="VALUE" x="14.986" y="41.148" size="1.9304" layer="27"/>
 </element>
-<element name="U3" library="st_viper" package="SOIC100P600X175-10N" value="VIPER012LS" x="39.624" y="17.272" smashed="yes" rot="R180">
-<attribute name="NAME" x="43.284" y="13.935" size="1.27" layer="25" rot="R180"/>
-<attribute name="OC_TME" value="VIPER012LS" x="19.304" y="88.392" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="43.284" y="20.609" size="1.27" layer="27" rot="R180" align="top-left"/>
+<element name="U3" library="st_viper" package="SOIC100P600X175-10N" value="VIPER012LS" x="39.124" y="15.772" smashed="yes" rot="R180">
+<attribute name="NAME" x="42.784" y="12.435" size="1.27" layer="25" rot="R180"/>
+<attribute name="OC_TME" value="VIPER012LS" x="18.804" y="86.892" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="42.784" y="19.109" size="1.27" layer="27" rot="R180" align="top-left"/>
 </element>
 <element name="S3" library="switch-omron" package="B3F-10XX" value="" x="54.074" y="55" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="54.074" y="55" size="1.778" layer="27" font="vector" rot="R90" display="off"/>
@@ -2624,17 +2654,17 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <attribute name="OC_NEWARK" value="36M3542" x="45" y="55" size="1.778" layer="27" font="vector" display="off"/>
 <attribute name="VALUE" x="41.952" y="49.92" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C13" library="rcl" package="C0603" value="100nF" x="44.45" y="16.002" smashed="yes" rot="R270">
-<attribute name="NAME" x="45.085" y="16.637" size="1.27" layer="25" rot="R270"/>
-<attribute name="VALUE" x="42.545" y="16.637" size="1.27" layer="27" rot="R270"/>
+<element name="C13" library="rcl" package="C0603" value="100nF" x="43.95" y="14.502" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.585" y="15.137" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="42.045" y="15.137" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C14" library="rcl" package="C0603" value="TBD" x="44.958" y="18.542" smashed="yes">
-<attribute name="NAME" x="44.323" y="19.177" size="1.27" layer="25"/>
-<attribute name="VALUE" x="44.323" y="16.637" size="1.27" layer="27"/>
+<element name="C14" library="rcl" package="C0603" value="TBD" x="44.458" y="17.042" smashed="yes">
+<attribute name="NAME" x="43.823" y="17.677" size="1.27" layer="25"/>
+<attribute name="VALUE" x="43.823" y="15.137" size="1.27" layer="27"/>
 </element>
-<element name="D5" library="diode_" package="SOD-123_MINI-SMA" value="" x="50.8" y="16.51" smashed="yes">
-<attribute name="NAME" x="47.752" y="17.653" size="1.27" layer="25"/>
-<attribute name="VALUE" x="47.752" y="14.097" size="1.27" layer="27"/>
+<element name="D5" library="diode_" package="SOD-123_MINI-SMA" value="" x="50.3" y="15.01" smashed="yes">
+<attribute name="NAME" x="47.252" y="16.153" size="1.27" layer="25"/>
+<attribute name="VALUE" x="47.252" y="12.597" size="1.27" layer="27"/>
 </element>
 <element name="U4" library="LTC_By_element14_Batch_1" package="SOT95P280X145-5N" value="MIC5205-3.3YM5-TR" x="23.622" y="5.842" smashed="yes" rot="R90">
 <attribute name="MPN" value="LT1761ES5-3.3#TRMPBF" x="23.622" y="5.842" size="1.778" layer="27" font="vector" rot="R90" display="off"/>
@@ -2674,6 +2704,14 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <element name="R16" library="rcl" package="0207/7" value="0" x="13" y="11.5" smashed="yes">
 <attribute name="NAME" x="10.46" y="12.897" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="10.714" y="10.9412" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="JP1" library="pinhead" package="1X02" value="" x="5" y="7" smashed="yes" rot="R90">
+<attribute name="NAME" x="3.1712" y="4.3838" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="8.175" y="4.46" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="JP2" library="pinhead" package="1X02" value="" x="29" y="6" smashed="yes" rot="R90">
+<attribute name="NAME" x="27.1712" y="3.3838" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="32.175" y="3.46" size="1.27" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -2735,8 +2773,9 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="17.748" y1="7.366" x2="8.422" y2="7.366" width="0.4064" layer="1"/>
 <wire x1="23.788" y1="1.778" x2="23.622" y2="1.944" width="0.4064" layer="1"/>
 <wire x1="23.622" y1="1.944" x2="23.622" y2="4.5466" width="0.4064" layer="1"/>
-<wire x1="26.416" y1="6.692" x2="26.416" y2="8.382" width="0.4064" layer="1"/>
+<wire x1="26.416" y1="6.692" x2="26.416" y2="7" width="0.4064" layer="1"/>
 <via x="26.416" y="8.382" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
+<wire x1="26.416" y1="7" x2="26.416" y2="8.382" width="0.4064" layer="1"/>
 <wire x1="13.836" y1="48.408" x2="13.462" y2="48.408" width="0.254" layer="1"/>
 <wire x1="13.462" y1="48.408" x2="12.132" y2="48.408" width="0.254" layer="1"/>
 <wire x1="12.132" y1="48.408" x2="11.684" y2="48.856" width="0.254" layer="1"/>
@@ -2751,7 +2790,6 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="12.418" y1="59.408" x2="11.684" y2="58.674" width="0.254" layer="1"/>
 <contactref element="J2" pad="5"/>
 <wire x1="3.794" y1="53.02" x2="3.896" y2="52.918" width="0.254" layer="1"/>
-<wire x1="3.896" y1="52.918" x2="3.982" y2="52.832" width="0.254" layer="1"/>
 <wire x1="5.588" y1="52.92" x2="5.586" y2="52.918" width="0.254" layer="1"/>
 <wire x1="5.586" y1="52.918" x2="3.896" y2="52.918" width="0.254" layer="1"/>
 <wire x1="33.665" y1="47.948" x2="33.665" y2="48.456" width="0.254" layer="16"/>
@@ -2776,13 +2814,12 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="36.068" y1="49.53" x2="34.036" y2="49.53" width="0.254" layer="1"/>
 <wire x1="36.576" y1="50.419" x2="36.576" y2="50.038" width="0.254" layer="1"/>
 <wire x1="36.576" y1="50.038" x2="36.068" y2="49.53" width="0.254" layer="1"/>
-<wire x1="56.3346" y1="50.7754" x2="56.3346" y2="51.7488" width="0.4064" layer="16"/>
-<wire x1="56.3346" y1="51.7488" x2="56.0134" y2="52.07" width="0.4064" layer="16"/>
-<wire x1="56.0134" y1="52.07" x2="54.61" y2="52.07" width="0.4064" layer="16"/>
-<wire x1="54.61" y1="52.07" x2="53.594" y2="53.086" width="0.4064" layer="16"/>
-<wire x1="53.594" y1="53.086" x2="53.594" y2="54.61" width="0.4064" layer="16"/>
-<wire x1="48.2512" y1="52.7394" x2="50.1218" y2="54.61" width="0.4064" layer="16"/>
-<wire x1="50.1218" y1="54.61" x2="53.594" y2="54.61" width="0.4064" layer="16"/>
+<wire x1="56.3346" y1="51.7488" x2="56.0134" y2="52.07" width="0.254" layer="16"/>
+<wire x1="56.0134" y1="52.07" x2="54.61" y2="52.07" width="0.254" layer="16"/>
+<wire x1="54.61" y1="52.07" x2="53.594" y2="53.086" width="0.254" layer="16"/>
+<wire x1="53.594" y1="53.086" x2="53.594" y2="54.61" width="0.254" layer="16"/>
+<wire x1="48.2512" y1="52.7394" x2="50.1218" y2="54.61" width="0.254" layer="16"/>
+<wire x1="50.1218" y1="54.61" x2="53.594" y2="54.61" width="0.254" layer="16"/>
 <wire x1="41.7488" y1="52.7394" x2="41.7488" y2="49.8768" width="0.254" layer="16"/>
 <wire x1="41.7488" y1="49.8768" x2="38.354" y2="46.482" width="0.254" layer="16"/>
 <wire x1="33.665" y1="46.853" x2="33.665" y2="47.948" width="0.254" layer="16"/>
@@ -2790,8 +2827,9 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="34.036" y1="46.482" x2="33.665" y2="46.853" width="0.254" layer="16"/>
 <wire x1="22.4917" y1="49.3903" x2="20.828" y2="51.054" width="0.254" layer="16"/>
 <wire x1="33.27220625" y1="49.3903" x2="22.4917" y2="49.3903" width="0.254" layer="16"/>
-<wire x1="8.422" y1="7.366" x2="4.064" y2="7.366" width="0.4064" layer="1"/>
-<wire x1="1.016" y1="10.414" x2="1.016" y2="38.862" width="0.4064" layer="1"/>
+<wire x1="8.422" y1="7.366" x2="5" y2="7.366" width="0.4064" layer="1"/>
+<wire x1="5" y1="7.366" x2="3.564" y2="7.366" width="0.4064" layer="1"/>
+<wire x1="1.016" y1="9.914" x2="1.016" y2="38.862" width="0.4064" layer="1"/>
 <wire x1="1.016" y1="39.099" x2="1.541" y2="39.624" width="0.4064" layer="1"/>
 <wire x1="1.016" y1="39.099" x2="1.016" y2="38.862" width="0.4064" layer="1"/>
 <via x="1.541" y="39.624" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
@@ -2801,10 +2839,10 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <via x="9.144" y="50.038" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
 <wire x1="9.144" y1="50.038" x2="9.652" y2="49.53" width="0.254" layer="1"/>
 <wire x1="9.652" y1="49.53" x2="9.652" y2="48.856" width="0.254" layer="1"/>
-<wire x1="4.064" y1="7.366" x2="1.016" y2="10.414" width="0.4064" layer="1"/>
-<wire x1="56.3346" y1="58.2512" x2="54.4412" y2="58.2512" width="0.4064" layer="16"/>
-<wire x1="53.594" y1="57.404" x2="53.594" y2="54.61" width="0.4064" layer="16"/>
-<wire x1="54.4412" y1="58.2512" x2="53.594" y2="57.404" width="0.4064" layer="16"/>
+<wire x1="3.564" y1="7.366" x2="1.016" y2="9.914" width="0.4064" layer="1"/>
+<wire x1="56.3346" y1="58.2512" x2="54.4412" y2="58.2512" width="0.254" layer="16"/>
+<wire x1="53.594" y1="57.404" x2="53.594" y2="54.61" width="0.254" layer="16"/>
+<wire x1="54.4412" y1="58.2512" x2="53.594" y2="57.404" width="0.254" layer="16"/>
 <wire x1="14.122" y1="1.524" x2="14.422" y2="1.524" width="0.4064" layer="1"/>
 <wire x1="7.722" y1="1.524" x2="7.422" y2="1.524" width="0.4064" layer="1"/>
 <contactref element="D3" pad="C"/>
@@ -2813,57 +2851,54 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="L1" pad="1"/>
 <contactref element="C7" pad="2"/>
 <contactref element="C13" pad="2"/>
-<wire x1="42.249" y1="15.272" x2="41.91" y2="15.272" width="0.4064" layer="1"/>
-<wire x1="41.91" y1="15.272" x2="40.64" y2="15.272" width="0.4064" layer="1"/>
-<wire x1="40.894" y1="17.272" x2="40.64" y2="17.018" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="17.018" x2="40.64" y2="16.256" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="16.256" x2="40.64" y2="15.272" width="0.4064" layer="1"/>
-<wire x1="42.249" y1="17.272" x2="40.894" y2="17.272" width="0.4064" layer="1"/>
-<wire x1="42.249" y1="15.272" x2="44.33" y2="15.272" width="0.4064" layer="1"/>
-<wire x1="44.33" y1="15.272" x2="44.45" y2="15.152" width="0.4064" layer="1"/>
-<wire x1="44.45" y1="15.152" x2="46.482" y2="15.152" width="0.4064" layer="1"/>
-<wire x1="42.04" y1="15.142" x2="41.91" y2="15.272" width="0.4064" layer="1"/>
-<wire x1="40.059" y1="8.941" x2="40.64" y2="9.522" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="9.522" x2="40.64" y2="16.256" width="0.4064" layer="1"/>
-<wire x1="39.5" y1="8.382" x2="39.246" y2="8.636" width="0.4064" layer="1"/>
-<wire x1="39.5" y1="8.382" x2="39.5" y2="8.5" width="0.254" layer="1"/>
-<wire x1="39.5" y1="8.5" x2="39" y2="9" width="0.254" layer="1"/>
-<wire x1="39" y1="9" x2="40" y2="9" width="0.254" layer="1"/>
-<wire x1="40" y1="9" x2="40.059" y2="8.941" width="0.254" layer="1"/>
-<wire x1="34.798" y1="14.224" x2="35.011" y2="14.011" width="0.4064" layer="1"/>
-<wire x1="35.568" y1="11.954" x2="35.011" y2="12.511" width="0.4064" layer="1"/>
-<wire x1="35.011" y1="14.011" x2="35.011" y2="12.511" width="0.4064" layer="1"/>
-<wire x1="35.568" y1="11.954" x2="38.592" y2="11.954" width="0.4064" layer="1"/>
-<wire x1="38.592" y1="11.954" x2="38.9666" y2="11.5794" width="0.4064" layer="1"/>
-<wire x1="39.5" y1="8.77365625" x2="39.5" y2="8.382" width="0.4064" layer="1"/>
-<wire x1="38.9666" y1="11.5794" x2="38.9666" y2="9.30705625" width="0.4064" layer="1"/>
-<wire x1="38.9666" y1="9.30705625" x2="39.5" y2="8.77365625" width="0.4064" layer="1"/>
-<wire x1="39.246" y1="8.636" x2="39.246" y2="9.274" width="0.254" layer="1"/>
-<wire x1="39.246" y1="9.274" x2="39.878" y2="9.906" width="0.254" layer="1"/>
+<wire x1="41.749" y1="13.772" x2="40.91" y2="13.772" width="0.4064" layer="1"/>
+<wire x1="40.91" y1="13.772" x2="40.14" y2="13.772" width="0.4064" layer="1"/>
+<wire x1="40.394" y1="15.772" x2="40.14" y2="15.518" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="15.518" x2="40.14" y2="14.756" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="14.756" x2="40.14" y2="13.772" width="0.4064" layer="1"/>
+<wire x1="41.749" y1="15.772" x2="40.394" y2="15.772" width="0.4064" layer="1"/>
+<wire x1="41.749" y1="13.772" x2="43.83" y2="13.772" width="0.4064" layer="1"/>
+<wire x1="43.83" y1="13.772" x2="43.95" y2="13.652" width="0.4064" layer="1"/>
+<wire x1="43.95" y1="13.652" x2="45.982" y2="13.652" width="0.4064" layer="1"/>
+<wire x1="39.559" y1="7.441" x2="40.14" y2="8.022" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="8.022" x2="40.14" y2="11" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="11" x2="40.14" y2="14.756" width="0.4064" layer="1"/>
+<wire x1="39" y1="6.882" x2="39" y2="7" width="0.254" layer="1"/>
+<wire x1="39" y1="7" x2="38.5" y2="7.5" width="0.254" layer="1"/>
+<wire x1="38.5" y1="7.5" x2="39.5" y2="7.5" width="0.254" layer="1"/>
+<wire x1="39.5" y1="7.5" x2="39.559" y2="7.441" width="0.254" layer="1"/>
 <contactref element="R13" pad="1"/>
 <contactref element="C4" pad="2"/>
 <contactref element="C6" pad="2"/>
 <contactref element="C5" pad="2"/>
 <contactref element="C14" pad="2"/>
-<wire x1="45.808" y1="18.542" x2="46.228" y2="18.962" width="0.4064" layer="1"/>
-<wire x1="46.228" y1="18.962" x2="47.498" y2="18.962" width="0.4064" layer="1"/>
-<wire x1="47.498" y1="18.962" x2="49.53" y2="18.962" width="0.4064" layer="1"/>
-<wire x1="49.53" y1="18.962" x2="49.618" y2="19.05" width="0.4064" layer="1"/>
-<wire x1="49.618" y1="19.05" x2="51.22" y2="19.05" width="0.4064" layer="1"/>
-<wire x1="51.22" y1="19.05" x2="51.22" y2="20.398" width="0.4064" layer="1"/>
-<wire x1="51.22" y1="20.398" x2="51.562" y2="20.74" width="0.4064" layer="1"/>
-<wire x1="51.054" y1="14.986" x2="51.22" y2="15.152" width="0.4064" layer="1"/>
-<wire x1="51.054" y1="14.986" x2="46.648" y2="14.986" width="0.4064" layer="1"/>
-<wire x1="51.22" y1="15.152" x2="51.22" y2="19.05" width="0.4064" layer="1"/>
-<wire x1="32.742" y1="14.568" x2="34.454" y2="14.568" width="0.4064" layer="1"/>
-<wire x1="34.454" y1="14.568" x2="35.011" y2="14.011" width="0.4064" layer="1"/>
+<wire x1="45.308" y1="17.042" x2="45.728" y2="17.462" width="0.4064" layer="1"/>
+<wire x1="45.728" y1="17.462" x2="46.998" y2="17.462" width="0.4064" layer="1"/>
+<wire x1="46.998" y1="17.462" x2="49.03" y2="17.462" width="0.4064" layer="1"/>
+<wire x1="49.03" y1="17.462" x2="49.118" y2="17.55" width="0.4064" layer="1"/>
+<wire x1="49.118" y1="17.55" x2="50.72" y2="17.55" width="0.4064" layer="1"/>
+<wire x1="50.72" y1="17.55" x2="50.72" y2="18.898" width="0.4064" layer="1"/>
+<wire x1="50.72" y1="18.898" x2="51.062" y2="19.24" width="0.4064" layer="1"/>
+<wire x1="50.554" y1="13.486" x2="50.72" y2="13.652" width="0.4064" layer="1"/>
+<wire x1="46.148" y1="13.486" x2="50.554" y2="13.486" width="0.4064" layer="1"/>
+<wire x1="50.72" y1="13.652" x2="50.72" y2="17.55" width="0.4064" layer="1"/>
+<wire x1="32.742" y1="14.568" x2="33.954" y2="14.568" width="0.4064" layer="1"/>
+<wire x1="33.954" y1="14.568" x2="35.011" y2="13.511" width="0.4064" layer="1"/>
 <wire x1="26.416" y1="8.382" x2="30" y2="11.966" width="0.4064" layer="16"/>
 <wire x1="30" y1="11.966" x2="30" y2="13" width="0.4064" layer="16"/>
 <via x="30" y="13" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
 <wire x1="30" y1="13" x2="30" y2="14" width="0.6096" layer="1"/>
 <wire x1="30" y1="14" x2="30.568" y2="14.568" width="0.6096" layer="1"/>
 <wire x1="30.568" y1="14.568" x2="32.742" y2="14.568" width="0.6096" layer="1"/>
-<wire x1="46.482" y1="15.152" x2="46.648" y2="14.986" width="0" layer="19" extent="1-1"/>
+<wire x1="45.982" y1="13.652" x2="46.148" y2="13.486" width="0.4064" layer="1"/>
+<wire x1="35.011" y1="11.989" x2="36" y2="11" width="0.4064" layer="1"/>
+<wire x1="36" y1="11" x2="40.14" y2="11" width="0.4064" layer="1"/>
+<wire x1="35.011" y1="13.511" x2="35.011" y2="11.989" width="0.4064" layer="1"/>
+<contactref element="JP1" pad="2"/>
+<contactref element="JP2" pad="2"/>
+<wire x1="5" y1="8.27" x2="5" y2="7.366" width="0.4064" layer="1"/>
+<wire x1="29" y1="7.27" x2="28.73" y2="7" width="0.4064" layer="1"/>
+<wire x1="28.73" y1="7" x2="26.416" y2="7" width="0.4064" layer="1"/>
 </signal>
 <signal name="NEUTRAL" class="3">
 <contactref element="CON_AC_IN" pad="2"/>
@@ -2874,38 +2909,38 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="57.912" y1="37.6174" x2="57.8866" y2="37.592" width="0.8128" layer="1"/>
 <wire x1="57.8866" y1="37.592" x2="43.942" y2="37.592" width="0.8128" layer="1"/>
 <wire x1="43.942" y1="37.592" x2="40.386" y2="34.036" width="0.8128" layer="1"/>
-<wire x1="12.954" y1="35.814" x2="12.954" y2="40.894" width="0.4064" layer="1"/>
 <wire x1="40.386" y1="34.036" x2="32.004" y2="34.036" width="0.8128" layer="1"/>
 <wire x1="32.004" y1="40.894" x2="32.004" y2="34.544" width="0.8128" layer="1"/>
 <wire x1="32.004" y1="34.544" x2="32.004" y2="34.036" width="0.8128" layer="1"/>
 <wire x1="5.461" y1="13.97" x2="5.461" y2="14" width="0.4064" layer="1"/>
-<wire x1="5.461" y1="14" x2="5.461" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="5.461" y1="14" x2="5.461" y2="18" width="0.4064" layer="1"/>
+<wire x1="5.461" y1="18" x2="5.461" y2="20.32" width="0.4064" layer="1"/>
 <wire x1="12.954" y1="34.044" x2="12.954" y2="34.036" width="0.4064" layer="1"/>
-<wire x1="12.954" y1="34.036" x2="12.954" y2="24.384" width="0.4064" layer="1"/>
-<wire x1="12.954" y1="34.044" x2="12.954" y2="40.894" width="0.8128" layer="1"/>
+<wire x1="12.954" y1="34.036" x2="12.954" y2="23.884" width="0.4064" layer="1"/>
+<wire x1="12.954" y1="40.894" x2="12.954" y2="34.044" width="0.8128" layer="1"/>
 <wire x1="32.004" y1="34.036" x2="12.954" y2="34.036" width="0.8128" layer="1"/>
-<wire x1="12.954" y1="24.384" x2="8.89" y2="20.32" width="0.4064" layer="1"/>
-<wire x1="8.89" y1="20.32" x2="5.461" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="12.954" y1="23.884" x2="9.39" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="9.39" y1="20.32" x2="5.461" y2="20.32" width="0.4064" layer="1"/>
 <contactref element="R16" pad="1"/>
-<wire x1="9.19" y1="11.5" x2="7.961" y2="11.5" width="0.4064" layer="1"/>
-<wire x1="7.961" y1="11.5" x2="5.461" y2="14" width="0.4064" layer="1"/>
+<wire x1="9.19" y1="20.12" x2="9.39" y2="20.32" width="0.4064" layer="1"/>
+<wire x1="9.19" y1="11.5" x2="9.19" y2="20.12" width="0.4064" layer="1"/>
 </signal>
 <signal name="LINE_UNFUSED" class="3">
 <contactref element="CON_AC_IN" pad="1"/>
 <contactref element="FUSE_MAINS" pad="1"/>
 <wire x1="57.912" y1="42.6466" x2="49.3014" y2="42.6466" width="0.8128" layer="1"/>
-<wire x1="47.244" y1="49.0982" x2="47.244" y2="44.704" width="0.8128" layer="1"/>
+<wire x1="47.244" y1="47.0982" x2="47.244" y2="44.704" width="0.8128" layer="1"/>
 <wire x1="49.3014" y1="42.6466" x2="47.244" y2="44.704" width="0.8128" layer="1"/>
 </signal>
 <signal name="LINE_FUSED" class="3">
 <contactref element="CON_BLIND" pad="2"/>
 <contactref element="D1" pad="A"/>
 <contactref element="FUSE_MAINS" pad="2"/>
-<wire x1="57.912" y1="27.432" x2="48.0822" y2="27.432" width="0.8128" layer="1"/>
-<wire x1="48.0822" y1="27.432" x2="47.244" y2="26.5938" width="0.8128" layer="1"/>
-<wire x1="47.244" y1="26.5938" x2="44.8818" y2="26.5938" width="0.8128" layer="1"/>
+<wire x1="57.912" y1="27.432" x2="50.0822" y2="27.432" width="0.8128" layer="1"/>
+<wire x1="50.0822" y1="27.432" x2="47.244" y2="24.5938" width="0.8128" layer="1"/>
+<wire x1="47.244" y1="24.5938" x2="42.8818" y2="24.5938" width="0.8128" layer="1"/>
 <wire x1="40.132" y1="21.844" x2="33.867" y2="21.844" width="0.8128" layer="1"/>
-<wire x1="44.8818" y1="26.5938" x2="40.132" y2="21.844" width="0.8128" layer="1"/>
+<wire x1="42.8818" y1="24.5938" x2="40.132" y2="21.844" width="0.8128" layer="1"/>
 </signal>
 <signal name="LINE_RECTIFIED" class="5">
 <contactref element="R1" pad="1"/>
@@ -2918,12 +2953,12 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="C7" pad="1"/>
 <contactref element="C13" pad="1"/>
 <contactref element="D5" pad="C"/>
-<wire x1="42.249" y1="16.272" x2="43.196" y2="16.272" width="0.4064" layer="1"/>
-<wire x1="43.776" y1="16.852" x2="44.45" y2="16.852" width="0.4064" layer="1"/>
-<wire x1="43.196" y1="16.272" x2="43.776" y2="16.852" width="0.4064" layer="1"/>
-<wire x1="44.45" y1="16.852" x2="46.482" y2="16.852" width="0.4064" layer="1"/>
-<wire x1="46.482" y1="16.852" x2="48.658" y2="16.852" width="0.4064" layer="1"/>
-<wire x1="48.658" y1="16.852" x2="49" y2="16.51" width="0.4064" layer="1"/>
+<wire x1="41.749" y1="14.772" x2="42.696" y2="14.772" width="0.4064" layer="1"/>
+<wire x1="43.276" y1="15.352" x2="43.95" y2="15.352" width="0.4064" layer="1"/>
+<wire x1="42.696" y1="14.772" x2="43.276" y2="15.352" width="0.4064" layer="1"/>
+<wire x1="43.95" y1="15.352" x2="45.982" y2="15.352" width="0.4064" layer="1"/>
+<wire x1="45.982" y1="15.352" x2="48.158" y2="15.352" width="0.4064" layer="1"/>
+<wire x1="48.158" y1="15.352" x2="48.5" y2="15.01" width="0.4064" layer="1"/>
 </signal>
 <signal name="+3V3" class="4">
 <contactref element="RELAY2" pad="A1"/>
@@ -2934,29 +2969,29 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="C1" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="C3" pad="1"/>
-<wire x1="38.004" y1="38.894" x2="38.004" y2="43.974" width="0.8128" layer="16"/>
-<wire x1="38.004" y1="43.974" x2="36.48" y2="45.498" width="0.8128" layer="16"/>
-<wire x1="36.48" y1="45.498" x2="29.686" y2="45.498" width="0.8128" layer="16"/>
-<wire x1="29.686" y1="45.498" x2="27.178" y2="48.006" width="0.8128" layer="16"/>
-<wire x1="27.178" y1="48.006" x2="21.082" y2="48.006" width="0.8128" layer="16"/>
-<wire x1="21.082" y1="48.006" x2="18.796" y2="45.72" width="0.8128" layer="16"/>
-<wire x1="19.05" y1="44.704" x2="18.954" y2="44.608" width="0.254" layer="16"/>
-<wire x1="18.954" y1="38.894" x2="18.954" y2="44.608" width="0.8128" layer="16"/>
-<wire x1="19.05" y1="44.704" x2="18.796" y2="44.704" width="0.254" layer="16"/>
-<wire x1="18.796" y1="45.72" x2="7.62" y2="45.72" width="0.8128" layer="16"/>
-<wire x1="7.62" y1="45.72" x2="7.62" y2="43.18" width="0.8128" layer="16"/>
-<wire x1="7.62" y1="43.18" x2="1.016" y2="36.576" width="0.8128" layer="16"/>
-<wire x1="1.016" y1="36.576" x2="1.016" y2="10.414" width="0.8128" layer="16"/>
-<wire x1="17.78" y1="6.096" x2="5.334" y2="6.096" width="0.8128" layer="16"/>
-<via x="17.78" y="6.096" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
-<wire x1="1.016" y1="10.414" x2="5.334" y2="6.096" width="0.8128" layer="16"/>
+<wire x1="38.004" y1="38.894" x2="38.004" y2="43.974" width="0.4064" layer="16"/>
+<wire x1="38.004" y1="43.974" x2="36.48" y2="45.498" width="0.4064" layer="16"/>
+<wire x1="36.48" y1="45.498" x2="29.686" y2="45.498" width="0.4064" layer="16"/>
+<wire x1="29.686" y1="45.498" x2="27.178" y2="48.006" width="0.4064" layer="16"/>
+<wire x1="27.178" y1="48.006" x2="21.082" y2="48.006" width="0.4064" layer="16"/>
+<wire x1="21.082" y1="48.006" x2="18.796" y2="45.72" width="0.4064" layer="16"/>
+<wire x1="18.954" y1="38.894" x2="18.954" y2="42.608" width="0.4064" layer="16"/>
+<wire x1="18.954" y1="42.608" x2="18.954" y2="44.608" width="0.4064" layer="16"/>
+<wire x1="18.796" y1="45.72" x2="7.62" y2="45.72" width="0.4064" layer="16"/>
+<wire x1="7.62" y1="45.72" x2="7.62" y2="43.18" width="0.4064" layer="16"/>
+<wire x1="7.62" y1="43.18" x2="1.016" y2="36.576" width="0.4064" layer="16"/>
+<wire x1="1.016" y1="36.576" x2="1.016" y2="8.414" width="0.4064" layer="16"/>
+<wire x1="19.28" y1="6.096" x2="5" y2="6.096" width="0.4064" layer="16"/>
+<via x="19.28" y="6.096" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
+<wire x1="5" y1="6.096" x2="3.334" y2="6.096" width="0.4064" layer="16"/>
+<wire x1="1.016" y1="8.414" x2="3.334" y2="6.096" width="0.4064" layer="16"/>
 <contactref element="U4" pad="5"/>
 <contactref element="C17" pad="1"/>
-<wire x1="22.6822" y1="7.1374" x2="22.4282" y2="7.3914" width="0.4064" layer="1"/>
-<wire x1="22.4282" y1="7.3914" x2="21.082" y2="7.3914" width="0.4064" layer="1"/>
-<wire x1="21.082" y1="7.3914" x2="19.0754" y2="7.3914" width="0.4064" layer="1"/>
-<wire x1="19.0754" y1="7.3914" x2="17.78" y2="6.096" width="0.4064" layer="1"/>
-<wire x1="21.082" y1="6.692" x2="21.082" y2="7.3914" width="0.4064" layer="1"/>
+<wire x1="22.6822" y1="7.1374" x2="22.4362" y2="6.8914" width="0.4064" layer="1"/>
+<wire x1="22.4362" y1="6.8914" x2="21.082" y2="6.8914" width="0.4064" layer="1"/>
+<wire x1="21.082" y1="6.8914" x2="20.0754" y2="6.8914" width="0.4064" layer="1"/>
+<wire x1="20.0754" y1="6.8914" x2="19.28" y2="6.096" width="0.4064" layer="1"/>
+<wire x1="21.082" y1="6.692" x2="21.082" y2="6.8914" width="0.4064" layer="1"/>
 <wire x1="13.836" y1="47.308" x2="11.836" y2="47.308" width="0.254" layer="1"/>
 <wire x1="11.836" y1="47.308" x2="11.684" y2="47.156" width="0.254" layer="1"/>
 <wire x1="11.684" y1="47.156" x2="9.652" y2="47.156" width="0.254" layer="1"/>
@@ -2979,8 +3014,10 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="31.877" y1="49.911" x2="31.242" y2="49.276" width="0.254" layer="1"/>
 <wire x1="34.036" y1="50.419" x2="33.528" y2="49.911" width="0.254" layer="1"/>
 <wire x1="33.528" y1="49.911" x2="31.877" y2="49.911" width="0.254" layer="1"/>
-<wire x1="18.954" y1="44.608" x2="18.954" y2="45.562" width="0.8128" layer="16"/>
-<wire x1="18.954" y1="45.562" x2="18.796" y2="45.72" width="0.8128" layer="16"/>
+<wire x1="18.954" y1="44.608" x2="18.954" y2="45.562" width="0.4064" layer="16"/>
+<wire x1="18.954" y1="45.562" x2="18.796" y2="45.72" width="0.4064" layer="16"/>
+<contactref element="JP1" pad="1"/>
+<wire x1="5" y1="5.73" x2="5" y2="6.096" width="0.4064" layer="16"/>
 </signal>
 <signal name="BLIND_UP" class="6">
 <contactref element="CON_BLIND" pad="3"/>
@@ -2993,9 +3030,9 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <signal name="BLIND_DOWN" class="6">
 <contactref element="CON_BLIND" pad="1"/>
 <contactref element="RELAY2" pad="14"/>
-<wire x1="57.912" y1="32.4358" x2="53.848" y2="32.4358" width="0.8128" layer="1"/>
-<wire x1="53.848" y1="32.4358" x2="51.816" y2="30.4038" width="0.8128" layer="1"/>
-<wire x1="51.816" y1="30.4038" x2="20.4978" y2="30.4038" width="0.8128" layer="1"/>
+<wire x1="57.912" y1="32.4358" x2="49.848" y2="32.4358" width="0.8128" layer="1"/>
+<wire x1="49.848" y1="32.4358" x2="47.816" y2="30.4038" width="0.8128" layer="1"/>
+<wire x1="47.816" y1="30.4038" x2="20.4978" y2="30.4038" width="0.8128" layer="1"/>
 <wire x1="18.954" y1="28.86" x2="18.954" y2="26.694" width="0.8128" layer="1"/>
 <wire x1="20.4978" y1="30.4038" x2="18.954" y2="28.86" width="0.8128" layer="1"/>
 </signal>
@@ -3028,46 +3065,46 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="D4" pad="C"/>
 <contactref element="C4" pad="1"/>
 <contactref element="D5" pad="A"/>
-<wire x1="52.92" y1="19.05" x2="53.594" y2="19.05" width="0.4064" layer="1"/>
-<wire x1="53.594" y1="19.05" x2="55.136" y2="19.05" width="0.4064" layer="1"/>
-<wire x1="55.136" y1="19.05" x2="55.626" y2="18.56" width="0.4064" layer="1"/>
-<wire x1="52.92" y1="19.05" x2="52.92" y2="16.83" width="0.4064" layer="1"/>
-<wire x1="52.92" y1="16.83" x2="52.6" y2="16.51" width="0.4064" layer="1"/>
-<wire x1="53.594" y1="20.74" x2="53.594" y2="19.05" width="0.4064" layer="1"/>
+<wire x1="52.42" y1="17.55" x2="53.094" y2="17.55" width="0.4064" layer="1"/>
+<wire x1="53.094" y1="17.55" x2="54.636" y2="17.55" width="0.4064" layer="1"/>
+<wire x1="54.636" y1="17.55" x2="55.126" y2="17.06" width="0.4064" layer="1"/>
+<wire x1="52.42" y1="17.55" x2="52.42" y2="15.33" width="0.4064" layer="1"/>
+<wire x1="52.42" y1="15.33" x2="52.1" y2="15.01" width="0.4064" layer="1"/>
+<wire x1="53.094" y1="19.24" x2="53.094" y2="17.55" width="0.4064" layer="1"/>
 </signal>
 <signal name="VIPER_FB">
 <contactref element="R11" pad="1"/>
 <contactref element="R13" pad="2"/>
 <contactref element="U3" pad="4"/>
 <contactref element="C14" pad="1"/>
-<wire x1="44.108" y1="18.542" x2="43.838" y2="18.272" width="0.4064" layer="1"/>
-<wire x1="43.838" y1="18.272" x2="42.418" y2="18.272" width="0.4064" layer="1"/>
-<wire x1="42.418" y1="18.272" x2="42.249" y2="18.272" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="20.574" x2="40.64" y2="18.796" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="18.796" x2="41.164" y2="18.272" width="0.4064" layer="1"/>
-<wire x1="41.164" y1="18.272" x2="42.418" y2="18.272" width="0.4064" layer="1"/>
-<wire x1="40.64" y1="20.574" x2="43.942" y2="23.876" width="0.4064" layer="1"/>
-<wire x1="53.594" y1="22.44" x2="51.562" y2="22.44" width="0.254" layer="1"/>
-<wire x1="43.942" y1="23.876" x2="51.054" y2="23.876" width="0.4064" layer="1"/>
-<wire x1="51.054" y1="23.876" x2="51.562" y2="23.368" width="0.4064" layer="1"/>
-<wire x1="51.562" y1="23.368" x2="51.562" y2="22.44" width="0.4064" layer="1"/>
+<wire x1="43.608" y1="17.042" x2="43.338" y2="16.772" width="0.4064" layer="1"/>
+<wire x1="43.338" y1="16.772" x2="41.918" y2="16.772" width="0.4064" layer="1"/>
+<wire x1="41.918" y1="16.772" x2="41.749" y2="16.772" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="19.074" x2="40.14" y2="17.296" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="17.296" x2="40.664" y2="16.772" width="0.4064" layer="1"/>
+<wire x1="40.664" y1="16.772" x2="41.918" y2="16.772" width="0.4064" layer="1"/>
+<wire x1="40.14" y1="19.074" x2="43.442" y2="22.376" width="0.4064" layer="1"/>
+<wire x1="53.094" y1="20.94" x2="51.062" y2="20.94" width="0.254" layer="1"/>
+<wire x1="43.442" y1="22.376" x2="50.554" y2="22.376" width="0.4064" layer="1"/>
+<wire x1="50.554" y1="22.376" x2="51.062" y2="21.868" width="0.4064" layer="1"/>
+<wire x1="51.062" y1="21.868" x2="51.062" y2="20.94" width="0.4064" layer="1"/>
 </signal>
 <signal name="VIPER_COMP">
 <contactref element="R14" pad="2"/>
 <contactref element="U3" pad="5"/>
 <contactref element="C5" pad="1"/>
-<wire x1="47.41" y1="22.352" x2="47.41" y2="20.75" width="0.4064" layer="1"/>
-<wire x1="47.41" y1="20.75" x2="47.498" y2="20.662" width="0.4064" layer="1"/>
-<wire x1="47.498" y1="20.662" x2="42.506" y2="20.662" width="0.4064" layer="1"/>
-<wire x1="42.506" y1="20.662" x2="42.164" y2="20.32" width="0.4064" layer="1"/>
-<wire x1="42.164" y1="20.32" x2="42.164" y2="19.357" width="0.4064" layer="1"/>
-<wire x1="42.164" y1="19.357" x2="42.249" y2="19.272" width="0.4064" layer="1"/>
+<wire x1="46.91" y1="20.852" x2="46.91" y2="19.25" width="0.4064" layer="1"/>
+<wire x1="46.91" y1="19.25" x2="46.998" y2="19.162" width="0.4064" layer="1"/>
+<wire x1="46.998" y1="19.162" x2="42.006" y2="19.162" width="0.4064" layer="1"/>
+<wire x1="42.006" y1="19.162" x2="41.664" y2="18.82" width="0.4064" layer="1"/>
+<wire x1="41.664" y1="18.82" x2="41.664" y2="17.857" width="0.4064" layer="1"/>
+<wire x1="41.664" y1="17.857" x2="41.749" y2="17.772" width="0.4064" layer="1"/>
 </signal>
 <signal name="VIPER_COMP_MID">
 <contactref element="C6" pad="1"/>
 <contactref element="R14" pad="1"/>
-<wire x1="49.53" y1="20.662" x2="49.11" y2="21.082" width="0.4064" layer="1"/>
-<wire x1="49.11" y1="21.082" x2="49.11" y2="22.352" width="0.4064" layer="1"/>
+<wire x1="49.03" y1="19.162" x2="48.61" y2="19.582" width="0.4064" layer="1"/>
+<wire x1="48.61" y1="19.582" x2="48.61" y2="20.852" width="0.4064" layer="1"/>
 </signal>
 <signal name="LINE_FILTERED">
 <contactref element="U3" pad="6"/>
@@ -3077,13 +3114,15 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="U3" pad="10"/>
 <contactref element="L2" pad="2"/>
 <contactref element="C9" pad="1"/>
-<wire x1="36.999" y1="19.272" x2="36.999" y2="18.272" width="0.254" layer="1"/>
-<wire x1="36.999" y1="18.272" x2="36.999" y2="17.272" width="0.254" layer="1"/>
-<wire x1="36.999" y1="17.272" x2="36.999" y2="16.272" width="0.254" layer="1"/>
-<wire x1="36.999" y1="16.272" x2="36.999" y2="15.272" width="0.254" layer="1"/>
-<wire x1="36.999" y1="15.272" x2="36.999" y2="18.309" width="0.254" layer="1"/>
-<wire x1="36.999" y1="18.309" x2="36.914" y2="18.224" width="0.254" layer="1"/>
-<wire x1="36.914" y1="18.224" x2="34.084" y2="18.224" width="0.254" layer="1"/>
+<wire x1="36.499" y1="17.772" x2="36.499" y2="16.772" width="0.254" layer="1"/>
+<wire x1="36.499" y1="16.772" x2="36.499" y2="15.772" width="0.254" layer="1"/>
+<wire x1="36.499" y1="15.772" x2="36.499" y2="14.772" width="0.254" layer="1"/>
+<wire x1="36.499" y1="14.772" x2="36.499" y2="13.772" width="0.254" layer="1"/>
+<wire x1="36.499" y1="13.772" x2="36.499" y2="16.809" width="0.254" layer="1"/>
+<wire x1="36.499" y1="16.809" x2="36.414" y2="16.724" width="0.254" layer="1"/>
+<wire x1="36.414" y1="16.724" x2="34.584" y2="16.724" width="0.254" layer="1"/>
+<wire x1="34.584" y1="16.724" x2="34.084" y2="17.224" width="0.254" layer="1"/>
+<wire x1="34.084" y1="17.224" x2="34.084" y2="18.224" width="0.254" layer="1"/>
 <via x="34.084" y="18.224" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
 <wire x1="34.084" y1="18.224" x2="21.701" y2="18.224" width="0.254" layer="16"/>
 <wire x1="21.701" y1="18.224" x2="20.447" y2="16.97" width="0.254" layer="16"/>
@@ -3223,9 +3262,9 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="U2" pad="P.15"/>
 <contactref element="S3" pad="1"/>
 <contactref element="S3" pad="2"/>
-<wire x1="51.8134" y1="58.2512" x2="51.8134" y2="51.7488" width="0.4064" layer="1"/>
-<wire x1="51.8134" y1="58.2512" x2="49.67496875" y2="58.2512" width="0.4064" layer="1"/>
-<wire x1="49.67496875" y1="58.2512" x2="49.24316875" y2="58.683" width="0.4064" layer="1"/>
+<wire x1="51.8134" y1="58.2512" x2="51.8134" y2="51.7488" width="0.254" layer="1"/>
+<wire x1="51.8134" y1="58.2512" x2="49.67496875" y2="58.2512" width="0.254" layer="1"/>
+<wire x1="49.67496875" y1="58.2512" x2="49.24316875" y2="58.683" width="0.254" layer="1"/>
 <wire x1="40.24883125" y1="58.683" x2="39.5644" y2="57.99856875" width="0.254" layer="1"/>
 <wire x1="39.5644" y1="57.99856875" x2="39.5644" y2="55.4316" width="0.254" layer="1"/>
 <wire x1="39.624" y1="55.372" x2="39.5644" y2="55.4316" width="0.254" layer="1"/>
@@ -3272,38 +3311,47 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <contactref element="L1" pad="2"/>
 <contactref element="D4" pad="A"/>
 <contactref element="R9" pad="2"/>
-<wire x1="37.06" y1="2.31" x2="33.606" y2="2.31" width="0.4064" layer="1"/>
-<wire x1="47.268" y1="2.31" x2="49.53" y2="4.572" width="0.4064" layer="1"/>
-<wire x1="49.53" y1="4.572" x2="49.53" y2="8.252" width="0.4064" layer="1"/>
-<wire x1="49.53" y1="8.252" x2="49.4" y2="8.382" width="0.4064" layer="1"/>
-<wire x1="47.268" y1="2.31" x2="37.06" y2="2.31" width="0.4064" layer="1"/>
+<wire x1="37.56" y1="0.81" x2="34.606" y2="0.81" width="0.4064" layer="1"/>
+<wire x1="46.768" y1="0.81" x2="49.03" y2="3.072" width="0.4064" layer="1"/>
+<wire x1="49.03" y1="3.072" x2="49.03" y2="6.752" width="0.4064" layer="1"/>
+<wire x1="49.03" y1="6.752" x2="48.9" y2="6.882" width="0.4064" layer="1"/>
+<wire x1="46.768" y1="0.81" x2="37.56" y2="0.81" width="0.4064" layer="1"/>
 <contactref element="U4" pad="1"/>
 <contactref element="C16" pad="1"/>
 <contactref element="U4" pad="3"/>
 <wire x1="24.5618" y1="4.5466" x2="25.4" y2="4.5466" width="0.4064" layer="1"/>
 <wire x1="25.4" y1="4.5466" x2="25.9706" y2="4.5466" width="0.4064" layer="1"/>
 <wire x1="25.9706" y1="4.5466" x2="26.416" y2="4.992" width="0.4064" layer="1"/>
-<wire x1="22.6822" y1="4.5466" x2="22.6822" y2="3.4798" width="0.4064" layer="1"/>
-<wire x1="31.242" y1="4.674" x2="26.734" y2="4.674" width="0.4064" layer="1"/>
+<wire x1="32.242" y1="4.674" x2="29" y2="4.674" width="0.4064" layer="1"/>
+<wire x1="29" y1="4.674" x2="26.734" y2="4.674" width="0.4064" layer="1"/>
 <wire x1="26.734" y1="4.674" x2="26.416" y2="4.992" width="0.4064" layer="1"/>
-<wire x1="55.626" y1="10.2" x2="53.808" y2="8.382" width="0.4064" layer="1"/>
-<wire x1="49.4" y1="8.382" x2="53.808" y2="8.382" width="0.4064" layer="1"/>
-<wire x1="55.626" y1="14.46" x2="55.626" y2="10.2" width="0.4064" layer="1"/>
+<wire x1="55.126" y1="8.7" x2="53.308" y2="6.882" width="0.4064" layer="1"/>
+<wire x1="48.9" y1="6.882" x2="53.308" y2="6.882" width="0.4064" layer="1"/>
+<wire x1="55.126" y1="12.96" x2="55.126" y2="8.7" width="0.4064" layer="1"/>
 <contactref element="C10" pad="1"/>
 <contactref element="D6" pad="C"/>
-<wire x1="21.608" y1="1.778" x2="22.37" y2="1.778" width="0.4064" layer="1"/>
-<wire x1="22.6822" y1="2.0902" x2="22.37" y2="1.778" width="0.4064" layer="1"/>
-<wire x1="22.6822" y1="2.0902" x2="22.6822" y2="4.5466" width="0.4064" layer="1"/>
-<wire x1="21.608" y1="1.778" x2="21.844" y2="1.542" width="0.4064" layer="1"/>
 <wire x1="25.488" y1="1.778" x2="25.488" y2="4.4586" width="0.4064" layer="1"/>
 <wire x1="25.488" y1="4.4586" x2="25.4" y2="4.5466" width="0.4064" layer="1"/>
 <contactref element="C11" pad="1"/>
-<wire x1="33.606" y1="2.31" x2="32.742" y2="3.174" width="0.4064" layer="1"/>
-<wire x1="32.742" y1="3.174" x2="31.242" y2="4.674" width="0.4064" layer="1"/>
-<wire x1="32.742" y1="4.218" x2="32.742" y2="3.174" width="0.4064" layer="1"/>
+<wire x1="34.606" y1="0.81" x2="32.742" y2="2.674" width="0.4064" layer="1"/>
+<wire x1="32.742" y1="4.174" x2="32.242" y2="4.674" width="0.4064" layer="1"/>
+<wire x1="32.742" y1="4.218" x2="32.742" y2="4.174" width="0.4064" layer="1"/>
+<wire x1="32.742" y1="4.174" x2="32.742" y2="2.674" width="0.4064" layer="1"/>
 <wire x1="35.79" y1="4.746" x2="33.27" y2="4.746" width="0.4064" layer="1"/>
 <wire x1="33.27" y1="4.746" x2="32.742" y2="4.218" width="0.4064" layer="1"/>
-<wire x1="22.6822" y1="4.5466" x2="24.5618" y2="4.5466" width="0" layer="19" extent="1-1"/>
+<via x="19" y="3.5" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
+<wire x1="19" y1="3.5" x2="27" y2="3.5" width="0.4064" layer="16"/>
+<via x="27" y="3.5" extent="1-16" drill="0.5" diameter="1.05" shape="octagon"/>
+<wire x1="27" y1="3.5" x2="26.416" y2="4.084" width="0.4064" layer="1"/>
+<wire x1="26.416" y1="4.084" x2="26.416" y2="4.992" width="0.4064" layer="1"/>
+<wire x1="21.608" y1="1.778" x2="21.608" y2="2.892" width="0.4064" layer="1"/>
+<wire x1="21.608" y1="2.892" x2="21" y2="3.5" width="0.4064" layer="1"/>
+<wire x1="21" y1="3.5" x2="19" y2="3.5" width="0.4064" layer="1"/>
+<wire x1="21.608" y1="1.778" x2="21.9136" y2="1.778" width="0.4064" layer="1"/>
+<wire x1="22.6822" y1="4.5466" x2="22.6822" y2="2.5466" width="0.4064" layer="1"/>
+<wire x1="22.6822" y1="2.5466" x2="21.9136" y2="1.778" width="0.4064" layer="1"/>
+<contactref element="JP2" pad="1"/>
+<wire x1="29" y1="4.73" x2="29" y2="4.674" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$1" class="4">
 <contactref element="U4" pad="4"/>
@@ -3321,22 +3369,15 @@ Two variants - one "with legs" (for hands-free fit on PCB) and another "without 
 <wire x1="15.222" y1="5.334" x2="9.622" y2="5.334" width="0.4064" layer="1"/>
 <wire x1="9.622" y1="5.334" x2="9.622" y2="4.199" width="0.4064" layer="1"/>
 </signal>
-<signal name="NEUTRAL_DISCONNECTABLE" class="4">
+<signal name="NEUTRAL_SEP" class="4">
 <contactref element="R16" pad="2"/>
 <contactref element="D3" pad="A"/>
 <contactref element="C11" pad="2"/>
-<wire x1="32.7216375" y1="7.7586375" x2="32.742" y2="7.62105625" width="0.254" layer="1"/>
-<wire x1="32.7216375" y1="7.7586375" x2="33.081" y2="8.118" width="0.254" layer="1"/>
 <wire x1="32.742" y1="8.118" x2="33" y2="8.118" width="0.254" layer="1"/>
-<wire x1="33" y1="8.118" x2="33.081" y2="8.118" width="0.254" layer="1"/>
 <wire x1="32.742" y1="8.118" x2="33" y2="8.118" width="0.1524" layer="1"/>
-<wire x1="33" y1="8.118" x2="33.081" y2="8.118" width="0.1524" layer="1"/>
 <wire x1="32.742" y1="8.118" x2="33" y2="8.118" width="0.1524" layer="1"/>
 <contactref element="R9" pad="1"/>
-<wire x1="33" y1="8.118" x2="33.081" y2="8.118" width="0.1524" layer="1"/>
-<wire x1="32.5" y1="8.3712" x2="33" y2="8.3712" width="0.4064" layer="1"/>
 <wire x1="32.742" y1="10.468" x2="32.742" y2="8.6132" width="0.4064" layer="1"/>
-<wire x1="32.742" y1="8.6132" x2="32.5" y2="8.3712" width="0.4064" layer="1"/>
 <wire x1="35.79" y1="7.59" x2="33.528" y2="7.59" width="0.4064" layer="1"/>
 <wire x1="33.528" y1="7.59" x2="33" y2="8.118" width="0.4064" layer="1"/>
 <wire x1="32.742" y1="8.118" x2="32.742" y2="8.6132" width="0.4064" layer="1"/>
