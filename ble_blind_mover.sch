@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8123,7 +8123,6 @@ at 30/07/2012 10:08:22</description>
 <wire x1="0.3048" y1="1.4986" x2="-0.3048" y2="1.4986" width="0.1524" layer="21"/>
 <wire x1="-0.3048" y1="1.4986" x2="-0.4826" y2="1.4986" width="0.1524" layer="21"/>
 <wire x1="0.3048" y1="1.4986" x2="-0.3048" y2="1.4986" width="0.1524" layer="21" curve="-180"/>
-<text x="-2.1336" y="1.3716" size="1.27" layer="21" ratio="6" rot="SR0">*</text>
 <wire x1="-0.8636" y1="-1.4986" x2="0.8636" y2="-1.4986" width="0" layer="51"/>
 <wire x1="0.8636" y1="-1.4986" x2="0.8636" y2="-1.1938" width="0" layer="51"/>
 <wire x1="0.8636" y1="-1.1938" x2="0.8636" y2="-0.7112" width="0" layer="51"/>
@@ -8156,9 +8155,9 @@ at 30/07/2012 10:08:22</description>
 <wire x1="1.4986" y1="0.7112" x2="1.4986" y2="1.1938" width="0" layer="51"/>
 <wire x1="1.4986" y1="1.1938" x2="0.8636" y2="1.1938" width="0" layer="51"/>
 <wire x1="0.3048" y1="1.4986" x2="-0.3048" y2="1.4986" width="0" layer="51" curve="-180"/>
-<text x="-2.1336" y="1.3716" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
 <text x="-3.4544" y="2.54" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-3.4544" y="-4.445" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+<circle x="-1.798903125" y="2.370371875" radius="0.0762" width="0.254" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -9282,8 +9281,8 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 </classes>
 <parts>
 <part name="GND3" library="logic-supply" deviceset="GND" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="10nF"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="10n"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 <part name="GND5" library="logic-supply" deviceset="GND" device=""/>
 <part name="SWD" library="con-molex" deviceset="53?-04" device="047"/>
@@ -9296,7 +9295,7 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <attribute name="OC_RET" value="51-01-42"/>
 </part>
 <part name="D1" library="_hhn_diodes_smd" deviceset="SM400*" device="" technology="7"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="M1206" value="15"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="M1206" value="15R"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 <part name="RELAY1" library="relay-relpol" deviceset="RM50-3011-XX-XXXX" device="" value="RM50-3011-85-1003">
 <attribute name="OC_TME" value="RM50-P-03"/>
@@ -9311,22 +9310,22 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <part name="Q1" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="DMG6968U-7"/>
 <part name="Q2" library="SparkFun" deviceset="MOSFET-NCHANNEL" device="SMD" value="DMG6968U-7"/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="47K"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="10"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="10R"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="47K"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="10"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0603" value="10R"/>
 <part name="GND6" library="logic-supply" deviceset="GND" device=""/>
 <part name="GND7" library="logic-supply" deviceset="GND" device=""/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R0603" value="TBD"/>
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0603" value="TBD"/>
-<part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="470">
+<part name="R10" library="rcl" deviceset="R-EU_" device="R0603" value="470R">
 <attribute name="OC_TME" value="SMD0603-470R"/>
 </part>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="470">
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0603" value="470R">
 <attribute name="OC_TME" value="SMD0603-470R"/>
 </part>
-<part name="D2" library="Wurth_Elektronik_Optoelectronics_rev15b" deviceset="WL-SFTW" device="-150141M173100-R&amp;G&amp;B"/>
+<part name="LED1" library="Wurth_Elektronik_Optoelectronics_rev15b" deviceset="WL-SFTW" device="-150141M173100-R&amp;G&amp;B"/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
-<part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="470">
+<part name="R12" library="rcl" deviceset="R-EU_" device="R0603" value="470R">
 <attribute name="OC_TME" value="SMD0603-470R"/>
 </part>
 <part name="GND4" library="logic-supply" deviceset="GND" device=""/>
@@ -9346,17 +9345,17 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <part name="R9" library="rcl" deviceset="R-EU_" device="R1206" value="3K3"/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0603" value="82K"/>
 <part name="R13" library="rcl" deviceset="R-EU_" device="R0603" value="47K"/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="750pF"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="750p"/>
 <part name="R14" library="rcl" deviceset="R-EU_" device="R0603" value="100K"/>
-<part name="C6" library="rcl" deviceset="C-EU" device="C0603" value="22nF"/>
-<part name="L2" library="SparkFun" deviceset="INDUCTOR" device="1210" value="470uH">
+<part name="C6" library="rcl" deviceset="C-EU" device="C0603" value="22n"/>
+<part name="L2" library="SparkFun" deviceset="INDUCTOR" device="1210" value="470u">
 <attribute name="OC_TME" value="NLV10JT471"/>
 </part>
-<part name="C8" library="rcl" deviceset="C-EU" device="150-064X183" value="120nF">
+<part name="C8" library="rcl" deviceset="C-EU" device="150-064X183" value="120n">
 <attribute name="OC_TME" value="MPP-120NR15/630"/>
 </part>
-<part name="C9" library="rcl" deviceset="C-EU" device="150-064X183" value="120nF">
+<part name="C9" library="rcl" deviceset="C-EU" device="150-064X183" value="120n">
 <attribute name="OC_TME" value="MPP-120NR15/630"/>
 </part>
 <part name="FRAME1" library="martonmiklos" deviceset="A4L-LOC" device=""/>
@@ -9372,7 +9371,7 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <part name="S3" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="S4" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="FRAME4" library="martonmiklos" deviceset="A4L-LOC" device=""/>
-<part name="C13" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="C14" library="rcl" deviceset="C-EU" device="C0603" value="TBD"/>
 <part name="AGND1" library="supply1" deviceset="NEUTRAL" device=""/>
 <part name="AGND5" library="supply1" deviceset="NEUTRAL" device=""/>
@@ -9387,7 +9386,7 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <part name="GND15" library="logic-supply" deviceset="GND" device=""/>
 <part name="C16" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 <part name="C17" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
-<part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="470pF"/>
+<part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="470p"/>
 <part name="GND16" library="logic-supply" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
@@ -9402,7 +9401,7 @@ This setting can be found in the board layout editor under the Edit menu.  Selec
 <part name="C11" library="rcl" deviceset="C-EU" device="C1812" value="100uF">
 <attribute name="NI_PN" value="715929-01"/>
 </part>
-<part name="R16" library="rcl" deviceset="R-EU_" device="0207/7" value="0"/>
+<part name="R16" library="rcl" deviceset="R-EU_" device="0207/7" value="0R"/>
 <part name="AGND3" library="supply1" deviceset="NEUTRAL" device=""/>
 <part name="AGND4" library="supply1" deviceset="NEUTRAL" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
@@ -10059,7 +10058,7 @@ diode</text>
 <attribute name="VALUE" x="209.55" y="133.858" size="1.27" layer="96" font="vector" ratio="10"/>
 <attribute name="OC_TME" x="213.36" y="137.16" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="D2" gate="G$1" x="198.12" y="144.78" smashed="yes">
+<instance part="LED1" gate="G$1" x="198.12" y="144.78" smashed="yes">
 <attribute name="NAME" x="196.97" y="156.622" size="1.27" layer="95" font="vector" ratio="10"/>
 <attribute name="VALUE" x="194.43" y="130.812" size="1.27" layer="96" font="vector" ratio="10"/>
 </instance>
@@ -10388,7 +10387,7 @@ diode</text>
 </net>
 <net name="+3V3" class="4">
 <segment>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 <wire x1="187.96" y1="144.78" x2="180.34" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="144.78" x2="180.34" y2="147.32" width="0.1524" layer="91"/>
@@ -10456,14 +10455,14 @@ diode</text>
 </net>
 <net name="GO_UP" class="4">
 <segment>
-<pinref part="U2" gate="G$1" pin="P0.13"/>
-<wire x1="157.48" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
-<label x="162.56" y="78.74" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="124.46" x2="76.2" y2="124.46" width="0.1524" layer="91"/>
 <label x="76.2" y="124.46" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="P0.12"/>
+<wire x1="157.48" y1="76.2" x2="162.56" y2="76.2" width="0.1524" layer="91"/>
+<label x="162.56" y="76.2" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="LED_R" class="4">
@@ -10505,21 +10504,21 @@ diode</text>
 <net name="LED2_B_R" class="4">
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="BC"/>
+<pinref part="LED1" gate="G$1" pin="BC"/>
 <wire x1="208.28" y1="137.16" x2="203.2" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED2_R_R" class="4">
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="RC"/>
+<pinref part="LED1" gate="G$1" pin="RC"/>
 <wire x1="208.28" y1="144.78" x2="203.2" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED2_G_R" class="4">
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="GC"/>
+<pinref part="LED1" gate="G$1" pin="GC"/>
 <wire x1="208.28" y1="152.4" x2="203.2" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10617,7 +10616,7 @@ diode</text>
 <pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="N$1" class="4">
+<net name="U4_BYPASS" class="4">
 <segment>
 <pinref part="U4" gate="A" pin="BYP"/>
 <pinref part="C18" gate="G$1" pin="1"/>
@@ -10645,6 +10644,20 @@ diode</text>
 <wire x1="134.62" y1="38.1" x2="129.54" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="38.1" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
+</segment>
+</net>
+<net name="SCL" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="P0.10"/>
+<wire x1="142.24" y1="58.42" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
+<label x="142.24" y="55.88" size="1.27" layer="95" font="vector" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="SDA" class="4">
+<segment>
+<pinref part="U2" gate="G$1" pin="P0.13"/>
+<wire x1="157.48" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
+<label x="162.56" y="78.74" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>
